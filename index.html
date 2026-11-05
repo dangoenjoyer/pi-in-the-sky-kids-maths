@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Pi in the Sky | Maths tutoring for Years 1 to 4</title>
+<meta name="description" content="Friendly live maths lessons for kids in Years 1 to 4, held on Zoom or Microsoft Teams. $15 for a 30 minute lesson.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600&family=Nunito:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f6f9ff;--surface:#fff;--ink:#1c2757;--muted:#4d5a8a;--accent:#ffc93c;--accent-ink:#1c2757;--mint:#25b98a;--line:#d9e2f7;--blue:#3b5bdb;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#121a3d;--surface:#1b2655;--ink:#eef2ff;--muted:#b2bde6;--line:#2f3d7a;--blue:#8fa5ff}}
+:root[data-theme="dark"]{--bg:#121a3d;--surface:#1b2655;--ink:#eef2ff;--muted:#b2bde6;--line:#2f3d7a;--blue:#8fa5ff}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Nunito,system-ui,sans-serif;font-size:1.0625rem;line-height:1.6}
+h1,h2,h3{font-family:Fredoka,Nunito,system-ui,sans-serif;font-weight:600;line-height:1.15;margin:0}
+a{color:var(--blue)}
+:focus-visible{outline:3px solid var(--blue);outline-offset:3px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 1.25rem}
+nav{display:flex;justify-content:space-between;align-items:center;padding:1rem 0;gap:1rem;flex-wrap:wrap}
+.logo{font-family:Fredoka,sans-serif;font-size:1.3rem;font-weight:600;text-decoration:none;color:var(--ink)}
+nav ul{display:flex;gap:1.25rem;list-style:none;margin:0;padding:0}
+nav ul a{text-decoration:none;color:var(--ink);font-weight:600}
+.btn{display:inline-block;background:var(--accent);color:var(--accent-ink);font-weight:800;border:0;border-radius:999px;padding:.8rem 1.5rem;text-decoration:none;font-size:1rem;cursor:pointer;font-family:inherit}
+.btn:hover{filter:brightness(.95)}
+.hero{display:grid;grid-template-columns:1.2fr 1fr;gap:2.5rem;align-items:center;padding:3rem 0 4rem}
+.hero h1{font-size:clamp(2.3rem,6vw,3.8rem)}
+.hero p{color:var(--muted);max-width:34rem;margin:1.2rem 0 1.8rem;font-size:1.15rem}
+.try{background:var(--surface);border:2px solid var(--ink);border-radius:1.5rem;padding:1.5rem;box-shadow:6px 6px 0 var(--accent)}
+.try h2{font-size:1.1rem;color:var(--muted);font-weight:500}
+#q{font-family:Fredoka,sans-serif;font-size:3rem;margin:.6rem 0}
+.try form{display:flex;gap:.6rem}
+.try input{width:6rem;font:inherit;font-size:1.3rem;padding:.5rem .8rem;border-radius:.8rem;border:2px solid var(--line);background:var(--bg);color:var(--ink)}
+#fb{min-height:1.6rem;margin:.8rem 0 0;font-weight:800}
+section{padding:3rem 0}
+section h2{font-size:clamp(1.7rem,4vw,2.3rem);margin-bottom:.6rem}
+.lead{color:var(--muted);max-width:38rem;margin:0 0 2rem}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem;counter-reset:s;padding:0;list-style:none}
+.steps li{counter-increment:s;background:var(--surface);border-radius:1.25rem;padding:1.5rem;border:1px solid var(--line)}
+.steps li::before{content:counter(s);display:grid;place-items:center;width:2.4rem;height:2.4rem;border-radius:50%;background:var(--mint);color:#fff;font-family:Fredoka,sans-serif;font-weight:600;margin-bottom:.8rem}
+.steps h3{font-size:1.25rem;margin-bottom:.3rem}
+.steps p{margin:0;color:var(--muted)}
+.levels{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1.25rem}
+.lvl{border-left:6px solid var(--blue);padding:.2rem 0 .2rem 1rem}
+.lvl:nth-child(2){border-color:var(--mint)}.lvl:nth-child(3){border-color:var(--accent)}
+.lvl h3{font-size:1.3rem}.lvl p{margin:.3rem 0 0;color:var(--muted)}
+.prices{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1.25rem}
+.price{background:var(--surface);border:1px solid var(--line);border-radius:1.25rem;padding:1.5rem}
+.price b{font-family:Fredoka,sans-serif;font-size:2rem;display:block}
+.price p{margin:.3rem 0 0;color:var(--muted)}
+.contact{background:var(--surface);border:1px solid var(--line);border-radius:1.5rem;padding:2rem}
+label{display:block;font-weight:800;margin:1rem 0 .3rem}
+.contact input,.contact select,.contact textarea{width:100%;font:inherit;padding:.7rem .9rem;border-radius:.8rem;border:2px solid var(--line);background:var(--bg);color:var(--ink)}
+.contact .btn{margin-top:1.4rem}
+footer{padding:2rem 0 3rem;color:var(--muted);font-size:.95rem}
+@media (max-width:760px){.hero,.steps{grid-template-columns:1fr}.hero{padding-top:1.5rem}}
+.logo{display:flex;align-items:center;gap:.6rem}.logo svg{transition:transform .3s cubic-bezier(.3,1.8,.5,1)}.logo:hover svg{transform:rotate(-12deg) scale(1.12)}
+.hero{position:relative}.hero>div:not(.floaties){position:relative;z-index:1}
+.floaties{position:absolute;inset:0;pointer-events:none;overflow:hidden}
+.floaties span{position:absolute;font-family:Fredoka,sans-serif;font-size:2.6rem;color:var(--blue);opacity:.22;animation:bob 5s ease-in-out var(--d) infinite}
+@keyframes bob{50%{transform:translateY(-18px) rotate(14deg)}}
+.hero h1 .w{display:inline-block;animation:pop .7s cubic-bezier(.3,1.7,.5,1) both;animation-delay:calc(var(--i)*.12s)}
+@keyframes pop{from{transform:translateY(40px) scale(.6);opacity:0}}
+.btn{transition:transform .2s cubic-bezier(.3,1.8,.5,1)}.btn:hover{transform:rotate(-2deg) scale(1.06)}.btn:active{transform:scale(.96)}
+.steps li,.price{transition:transform .25s cubic-bezier(.3,1.8,.5,1)}.steps li:hover,.price:hover{transform:translateY(-6px) rotate(-1deg)}
+.steps li:nth-child(even):hover{transform:translateY(-6px) rotate(1deg)}
+.prices{grid-template-columns:minmax(220px,340px)}
+.sendrow{display:flex;flex-wrap:wrap;gap:.7rem;margin-top:1.4rem}.sendrow .btn{margin-top:0}
+.btn.alt{background:transparent;color:var(--ink);border:2px solid var(--ink)}
+.cf{position:fixed;width:10px;height:14px;border-radius:2px;pointer-events:none;z-index:50;animation:fly 1s ease-out forwards}
+@keyframes fly{to{transform:translate(var(--x),calc(var(--y) + 240px)) rotate(var(--r));opacity:0}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.floaties span,.hero h1 .w{animation:none}.btn,.logo svg,.steps li,.price{transition:none}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<nav>
+  <a class="logo" href="#top" aria-label="Pi in the Sky, home"><svg viewBox="0 0 64 64" width="44" height="44" aria-hidden="true"><rect x="3" y="3" width="58" height="58" rx="18" fill="#3b5bdb"/><circle cx="22" cy="26" r="5" fill="#fff"/><circle cx="42" cy="26" r="5" fill="#fff"/><circle cx="23" cy="27" r="2.2" fill="#1c2757"/><circle cx="43" cy="27" r="2.2" fill="#1c2757"/><path d="M20 40q12 12 24 0" fill="none" stroke="#ffc93c" stroke-width="5" stroke-linecap="round"/><text x="50" y="19" font-family="Fredoka,sans-serif" font-size="18" font-weight="600" fill="#ffc93c" text-anchor="middle">π</text></svg><span>Pi in the Sky</span></a>
+  <ul><li><a href="#how">How it works</a></li><li><a href="#levels">Year levels</a></li><li><a href="#prices">Prices</a></li><li><a href="#book">Book</a></li></ul>
+</nav>
+
+<header class="hero" id="top">
+  <div class="floaties" aria-hidden="true"><span style="left:2%;top:6%;--d:0s">+</span><span style="left:46%;top:2%;--d:1s">×</span><span style="left:90%;top:10%;--d:2s">÷</span><span style="left:38%;top:88%;--d:.5s">=</span><span style="left:94%;top:80%;--d:1.5s">π</span><span style="left:4%;top:84%;--d:2.5s">7</span></div>
+  <div>
+    <h1><span class="w" style="--i:0">Maths</span> <span class="w" style="--i:1">that</span> <span class="w" style="--i:2">finally</span> <span class="w" style="--i:3">makes</span> <span class="w" style="--i:4">sense</span></h1>
+    <p>Friendly live maths lessons for kids in Years 1 to 4, on Zoom or Microsoft Teams. No travel, no pressure, just a patient tutor and a whiteboard.</p>
+    <a class="btn" href="#book">Book a lesson</a>
+  </div>
+  <div class="try" aria-live="polite">
+    <h2>Warm-up: can you solve it?</h2>
+    <div id="q">7 × 8</div>
+    <form id="f"><input id="a" inputmode="numeric" autocomplete="off" aria-label="Your answer"><button class="btn" type="submit">Check</button></form>
+    <p id="fb"></p>
+  </div>
+</header>
+
+<section id="how">
+  <h2>How lessons work</h2>
+  <p class="lead">Everything happens online, so all you need is a computer or tablet and a quiet spot.</p>
+  <ol class="steps">
+    <li><h3>Book a time</h3><p>Choose a slot that suits your family and tell me what your child is working on.</p></li>
+    <li><h3>Click your link</h3><p>You will get a Zoom or Teams link by email, whichever you prefer. No downloads needed if you use a browser.</p></li>
+    <li><h3>Learn and practise</h3><p>Lessons use a shared whiteboard. Afterwards, parents get a short summary and a few practice questions.</p></li>
+  </ol>
+</section>
+
+<section id="levels">
+  <h2>Years 1 to 4</h2>
+  <p class="lead">Lessons follow what your child is learning at school, plus a bit of stretch or catch-up where needed.</p>
+  <div class="levels">
+    <div class="lvl"><h3>Years 1 and 2</h3><p>Counting, place value, adding and subtracting, shapes and simple measuring.</p></div>
+    <div class="lvl"><h3>Year 3</h3><p>Times tables, bigger numbers, simple fractions, time and money.</p></div>
+    <div class="lvl"><h3>Year 4</h3><p>Multiplication and division, fractions and decimals, area and word problems.</p></div>
+  </div>
+</section>
+
+<section id="prices">
+  <h2>Prices</h2>
+  <p class="lead">One simple price per lesson.</p>
+  <div class="prices">
+    <div class="price"><b>$15</b><h3>30-minute live lesson</h3><p>On Zoom or Microsoft Teams, at your child’s pace.</p></div>
+    
+    
+  </div>
+</section>
+
+<section id="book">
+  <h2>Book a lesson</h2>
+  <p class="lead">Fill this in, then choose Gmail, Outlook or your own email app. The message opens ready to send.</p>
+  <form class="contact" id="bk">
+    <label for="pn">Parent’s name</label><input id="pn" required>
+    <label for="cn">Child’s name and year level</label><input id="cn" required placeholder="e.g. Sam, Year 5">
+    <label for="pl">Preferred platform</label>
+    <select id="pl"><option>Zoom</option><option>Microsoft Teams</option><option>Either is fine</option></select>
+    <label for="ms">Anything we should know?</label><textarea id="ms" rows="3" placeholder="Topics your child finds tricky, best days and times"></textarea>
+    <div class="sendrow"><button class="btn" type="submit" value="gmail">Send with Gmail</button><button class="btn" type="submit" value="outlook">Send with Outlook</button><button class="btn alt" type="submit" value="app">Use my email app</button></div>
+  </form>
+</section>
+
+<footer>© Pi in the Sky, Elijah Billimoria. Contact: <a href="mailto:elibillimoriax@gmail.com">elibillimoriax@gmail.com</a></footer>
+</div>
+
+<script>
+var n1,n2;
+function boom(){if(matchMedia('(prefers-reduced-motion:reduce)').matches)return;var c=['#ffc93c','#25b98a','#3b5bdb','#ff6b81'],h=document.querySelector('.try').getBoundingClientRect();for(var i=0;i<28;i++){var s=document.createElement('i');s.className='cf';s.style.cssText='left:'+(h.left+h.width/2)+'px;top:'+(h.top+h.height/2)+'px;background:'+c[i%4]+';--x:'+(Math.random()*360-180)+'px;--y:'+(Math.random()*-260-40)+'px;--r:'+(Math.random()*720-360)+'deg';document.body.appendChild(s);setTimeout(function(el){el.remove()}.bind(null,s),1100);}}
+function nq(){n1=2+Math.floor(Math.random()*10);n2=2+Math.floor(Math.random()*10);
+document.getElementById('q').textContent=n1+' × '+n2;document.getElementById('a').value='';}
+document.getElementById('f').addEventListener('submit',function(e){
+e.preventDefault();var v=parseInt(document.getElementById('a').value,10),fb=document.getElementById('fb');
+if(isNaN(v)){fb.textContent='Type a number first.';return;}
+if(v===n1*n2){fb.textContent='Correct! Here’s a new one.';fb.style.color='var(--mint)';boom();nq();}
+else{fb.textContent='Not quite. Have another go.';fb.style.color='var(--ink)';}});
+nq();
+document.getElementById('bk').addEventListener('submit',function(e){
+e.preventDefault();
+var b='Parent: '+pn.value+'\nChild: '+cn.value+'\nPlatform: '+pl.value+'\nNotes: '+ms.value;
+var k=e.submitter&&e.submitter.value,to='elibillimoriax@gmail.com',s='Lesson request',u;
+if(k==='gmail')u='https://mail.google.com/mail/?view=cm&fs=1&to='+to+'&su='+encodeURIComponent(s)+'&body='+encodeURIComponent(b);
+else if(k==='outlook')u='https://outlook.live.com/mail/0/deeplink/compose?to='+to+'&subject='+encodeURIComponent(s)+'&body='+encodeURIComponent(b);
+else u='mailto:'+to+'?subject='+encodeURIComponent(s)+'&body='+encodeURIComponent(b);
+if(k==='gmail'||k==='outlook')window.open(u,'_blank','noopener');else location.href=u;});
+</script>
+</body>
+</html>
